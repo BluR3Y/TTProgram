@@ -2,16 +2,24 @@ body{
     margin: 0;
     background-color: #f0fcff;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
     overflow-x: hidden;
-    /* flex-direction: column;
-    align-content: center;
-    align-items: center;
-    overflow-x: hidden; */
+}
+
+.pageBackDrop{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    backdrop-filter: blur(2px);
+    display: none;
+}
+.displayBackDrop{
+    display: block;
 }
 
 .pageHeader{
@@ -20,32 +28,8 @@ body{
     background-color: #1f2628;
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 9;
     user-select: none;
-}
-
-.headerMenu{
-    width: 60px;
-    height: fit-content;
-    float: left;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 0;
-    cursor: pointer;
-}
-.headerMenu > div{
-    width: 40px;
-    height: 3px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 4.5px;
-}
-.headerMenu:hover{
-    background-color: #ffffff;
-}
-.headerMenu:hover > div{
-    background-color: black;
 }
 
 .headerTitle{
@@ -92,6 +76,47 @@ body{
     opacity: 1;
 }
 
+/* Side Menu --------------------- */
+
+.sideMenu{
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    left: -300px;
+    z-index: 10;
+    transition: left 0.5s ease;
+
+    background-color: rgb(24, 22, 22);
+}
+.showSideMenu{
+    left: 0;
+}
+
+.headerMenuBtn{
+    width: 60px;
+    height: fit-content;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+    cursor: pointer;
+    position: absolute;
+    right: -60px;
+}
+.headerMenuBtn > div{
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 4.5px;
+}
+.headerMenuBtn:hover{
+    background-color: #ffffff;
+}
+.headerMenuBtn:hover > div{
+    background-color: black;
+}
+
 /* preview --------------- */
 
 .contentPreview{
@@ -106,8 +131,8 @@ body{
     background-attachment: fixed;
     background-size: cover;
     position: absolute;
-    width: 95vw;
-    height: 500px;
+    width: inherit;
+    height: inherit;
     opacity: 0.9;
     z-index: -1;
 }

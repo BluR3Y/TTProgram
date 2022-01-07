@@ -4,6 +4,26 @@ function expandMenu(){
     contentMenu.classList.add("showContentMenu");
 }
 
+function displayBackDrop(){
+    var blur = document.getElementsByClassName("pageBackDrop")[0];
+    
+    if(!blur.classList.contains("displayBackDrop")){
+        blur.classList.add("displayBackDrop");
+    }else{
+        blur.classList.remove("displayBackDrop");
+    }
+}
+function clickedBackDrop(){
+    var blur = document.getElementsByClassName("pageBackDrop")[0];
+    var sideMenu = document.getElementsByClassName("sideMenu")[0];
+
+    blur.classList.remove("displayBackDrop");
+
+    if(sideMenu.classList.contains("showSideMenu")){
+        sideMenu.classList.remove("showSideMenu");
+    }
+}
+
 var mottoAppend = function(textElements,index){
     this.allEls = textElements;
     this.elementIndex = index;
@@ -50,48 +70,17 @@ function displayMotto(){
     new mottoAppend(textElements,0);
 }
 
-// var mottoAppend = function(el, elText){
-//     this.text = elText;
-//     this.el = el;
-//     this.loopNum = 0;
-//     this.tick();
-// }
+function showSideMenu(){
+    var sideMenu = document.getElementsByClassName("sideMenu")[0];
 
-// mottoAppend.prototype.tick = function(){
-//     var addingChar = this.text[this.loopNum];
-
-//     if(this.el.querySelector('span') != null){
-//         this.el.querySelector('span').innerHTML += addingChar;
-//     }else{
-//         this.el.innerHTML += addingChar;
-//     }
-
-//     if(addingChar === ' '){
-//         this.el.innerHTML += '<span></span>';
-//     }
-
-//     if(this.loopNum === this.text.length - 1){
-//         return;
-//     }
-
-//     this.loopNum += 1;
-//     var that = this;
-//     var delta = 150 - Math.random() * 50;
-//     setTimeout(() => {
-//         that.tick();
-//     }, delta);
-// };
-
-// function displayMotto(){
-    // var textCont = document.getElementsByClassName("previewText")[0];
-    // var textElements = textCont.querySelectorAll('h1');
-    
-//     for(var i=0; i < textElements.length; i++){
-//         var fullText = JSON.parse(textElements[i].getAttribute('data-type'))[0];
-//         new mottoAppend(textElements[i], fullText);
-//     }
-// }
+    if(!sideMenu.classList.contains("showSideMenu")){
+        sideMenu.classList.add("showSideMenu");
+    }else{
+        sideMenu.classList.remove("showSideMenu");
+    }
+    displayBackDrop();
+}
 
 window.addEventListener("load", ()=>{
-    // displayMotto();
+    displayMotto();
 });
