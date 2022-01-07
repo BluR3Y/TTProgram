@@ -1,0 +1,255 @@
+body{
+    margin: 0;
+    background-color: #f0fcff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    /* flex-direction: column;
+    align-content: center;
+    align-items: center;
+    overflow-x: hidden; */
+}
+
+.pageHeader{
+    width: 100vw;
+    height: 60px;
+    background-color: #1f2628;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    user-select: none;
+}
+
+.headerMenu{
+    width: 60px;
+    height: fit-content;
+    float: left;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+    cursor: pointer;
+}
+.headerMenu > div{
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 4.5px;
+}
+.headerMenu:hover{
+    background-color: #ffffff;
+}
+.headerMenu:hover > div{
+    background-color: black;
+}
+
+.headerTitle{
+    height: 100%;
+    width: fit-content;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    color: #e2f9ff;
+}
+.headerTitle > h1{
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 35px;
+}
+
+.headerAccount{
+    width: 220px;
+    height: 100%;
+    float: right;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+.headerAccount > button{
+    height: 40px;
+    width: 80px;
+    border: none;
+    background-color: white;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    opacity: 0.5;
+    cursor: pointer;
+    outline: 0;
+}
+.headerAccount > button:hover{
+    background-color: #fffdd0;
+    opacity: 1;
+}
+
+/* preview --------------- */
+
+.contentPreview{
+    width: 95vw;
+    height: 500px;
+    margin-top: 80px;
+}
+.contentPreview::before{
+    content: "";
+    background: url(../images/contentPreviewMid.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    width: 95vw;
+    height: 500px;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.previewText{
+    height: 100%;
+    width: 800px;
+    position: relative;
+    left: 200px;
+    font-size:40px;
+}
+.previewText > p{
+    font-weight: bold;
+    font-size: 0.6em;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin: 30px 0 10px 0;
+    position: relative;
+
+}
+.previewText > h1{
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    position: relative;
+    line-height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.previewText > h1 > span{
+    color: red;
+}
+
+.filterContainer{
+    width: 900px;
+    height: 130px;
+    margin: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.filterBanner{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.filterBanner > div{
+    height: 6px;
+    flex-grow: 1;
+    flex-basis: 0;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+}
+.filterBanner > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin: 0 20px;
+}
+
+.filterBtns{
+    width: 100%;
+    height: calc(100% - 65px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.filterBtns > button{
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 30px;
+    border: none;
+    background-color: #fffdd0;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+.filterBtns > button:hover{
+    background-color: black;
+    color: #fffdd0;
+}
+.selectedFilter{
+    background-color: black !important;
+    color: #fffdd0;
+}
+
+/* Recipe Container ------------------------------- */
+
+.recipeContainer{
+    width: 95vw;
+    margin: 80px 0 80px 0;
+    display: grid;
+    grid-template-columns: repeat(6, 250px);
+    grid-template-rows: auto;
+    justify-content: space-between;
+    grid-row-gap: 40px;
+}
+
+.recipeItem{
+    position: relative;
+    height: 325px;
+}
+
+#recipe_1{
+    background: url(https://kitchenswagger.com/wp-content/uploads/2014/12/pan-seared-filet-mignon-header.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#recipe_2{
+    background: url(https://tastesbetterfromscratch.com/wp-content/uploads/2014/09/Baked-Chicken-Wings-3.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#recipe_3{
+    background: url(https://natashaskitchen.com/wp-content/uploads/2020/09/Chicken-Lasagna-10.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#recipe_4{
+    background: url(https://bakerbynature.com/wp-content/uploads/2013/12/IMG_5986-2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#recipe_5{
+    background: url(https://cafedelites.com/wp-content/uploads/2018/03/Sheet-Pan-Salmon-1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#recipe_6{
+    background: url(https://therecipecritic.com/wp-content/uploads/2021/07/streettacos-667x1000.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#recipe_7{
+    background: url(https://assets.bonappetit.com/photos/5824f52a74299e805041bfe5/5:7/w_2449,h_3429,c_limit/garlic-soup-with-potatoes-and-poached-eggs.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#recipe_8{
+    background: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20191210-keto-pork-chops-delish-ehg-6331-1576865432.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
