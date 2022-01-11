@@ -86,7 +86,7 @@ body{
     z-index: 10;
     transition: left 0.5s ease;
 
-    background-color: rgb(24, 22, 22);
+    background-color: rgb(83, 83, 83);
 }
 .showSideMenu{
     left: 0;
@@ -117,6 +117,63 @@ body{
     background-color: black;
 }
 
+.menuContent{
+    width: 100%;
+    height: auto;
+}
+.menuContent > img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.sideFilterCont{
+    width: 100%;
+    height: auto;
+    background-color: rgb(88, 84, 84);
+}
+.sideFilterBrand{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    color: white;
+}
+.sideFilterBrand:hover{
+    background-color: rgb(88, 84, 84);
+}
+
+.sideFilterBtns{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+}
+.sideFilterBtns > button{
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: rgb(224, 28, 28);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+.sideFilterBtns > button:hover{
+    background-color: tomato;
+}
+
+.showSideFilters{
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+
 /* preview --------------- */
 
 .contentPreview{
@@ -126,7 +183,7 @@ body{
 }
 .contentPreview::before{
     content: "";
-    background: url(../images/contentPreviewMid.jpg);
+    background: url(../images/pageContent/contentPreviewMid.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -236,6 +293,10 @@ body{
 .recipeItem{
     position: relative;
     height: 350px;
+    display: none;
+}
+.displayRecipe{
+    display: block;
 }
 
 .recipeRating{
@@ -278,11 +339,11 @@ body{
 }
 
 .recipeName{
-    margin: 45px 0 0 0;
+    margin: 45px 0 10px 0;
     text-align: center;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    /* white-space: nowrap;
+    text-overflow: ellipsis; */
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
     color: wheat;
@@ -303,7 +364,57 @@ body{
 }
 
 #recipe_1{
-    background: url(https://kitchenswagger.com/wp-content/uploads/2014/12/pan-seared-filet-mignon-header.jpg);
+    background: url(../images/recipes/raspberrySouffle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_2{
+    background: url(../images/recipes/pastelon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_3{
+    background: url(../images/recipes/baklava.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_4{
+    background: url(../images/recipes/perfectLasagnaRecipe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_5{
+    background: url(../images/recipes/mangoPudding.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_6{
+    background: url(../images/recipes/scrambledEggs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_7{
+    background: url(../images/recipes/frenchMacros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_8{
+    background: url(../images/recipes/spagettiCarbonara.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_9{
+    background: url(../images/recipes/blackMushroomRice.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_10{
+    background: url(../images/recipes/protienPancakes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_11{
+    background: url(../images/recipes/chikenTikka.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
