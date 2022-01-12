@@ -93,28 +93,53 @@ body{
 }
 
 .headerMenuBtn{
-    width: 60px;
-    height: fit-content;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 0;
-    cursor: pointer;
     position: absolute;
     right: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
 }
-.headerMenuBtn > div{
-    width: 40px;
-    height: 3px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 4.5px;
+
+.menuBtn{
+    width: 50px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
 }
-.headerMenuBtn:hover{
-    background-color: #ffffff;
+.menuBtn::before,
+.menuBtn::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
 }
-.headerMenuBtn:hover > div{
-    background-color: black;
+.menuBtn::before{
+    transform: translateY(-14px);
+}
+.menuBtn::after{
+    transform: translateY(14px);
+}
+
+.headerMenuBtn.openMenu .menuBtn{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.headerMenuBtn.openMenu .menuBtn::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.headerMenuBtn.openMenu .menuBtn::after{
+    transform: rotate(-45deg) translate(35px, 35px);
 }
 
 .menuContent{
