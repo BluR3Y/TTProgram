@@ -1,0 +1,259 @@
+/* the body aspect of the page will take up the entire width of the screen and have a minimum height of the entire height of the page */
+/* settings the display of the body to flex and the direction to column allows items placed inside of it, to stack on top of each other*/
+body{                       
+    margin: 0;
+    background-color: #f0fcff;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+/* the container with the class attribute contentPreview is a banner that contains the motto of our webpage and which has its background set to a beutiful image*/
+.contentPreview{
+    width: 95vw;
+    height: 500px;
+    margin-top: 80px;
+}
+/* I created a before object of the container so that I could position the image perfectly ontop of the container */
+.contentPreview::before{
+    content: "";
+    background: url(../images/indexContent/contentPreviewMid.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    opacity: 0.9;
+    z-index: -1;
+}
+/* previewText is the text that is inside of the page banner which will load each character individually, craeting a typewriting effect */
+.previewText{
+    height: 100%;
+    width: 800px;
+    position: relative;
+    left: 200px;
+    font-size:40px;
+}
+.previewText > p{
+    font-weight: bold;
+    font-size: 0.6em;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin: 30px 0 10px 0;
+    position: relative;
+
+}
+.previewText > h1{
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    position: relative;
+    line-height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/* Span allows me to highlight certain keywords in the motto */
+.previewText > h1 > span{
+    color: red;
+}
+
+/* A container that houses the recipes filter buttons */
+.filterContainer{
+    width: 900px;
+    height: 130px;
+    margin: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+/* A container which houses the text to ask the user which filter they would like to use */
+.filterBanner{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.filterBanner > div{
+    height: 6px;
+    flex-grow: 1;
+    flex-basis: 0;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+}
+.filterBanner > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin: 0 20px;
+}
+
+/* The styling of the recipes filter buttons */
+.filterBtns{
+    width: 100%;
+    height: calc(100% - 65px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.filterBtns > button{
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 30px;
+    border: none;
+    background-color: #fffdd0;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+.filterBtns > button:hover{
+    background-color: black;
+    color: #fffdd0;
+}
+.selectedFilter{
+    background-color: black !important;
+    color: #fffdd0;
+}
+
+/* Recipe Container ------------------------------- */
+
+/* A grid that will house each recipe item */
+.recipeContainer{
+    width: 95vw;
+    margin: 80px 0 80px 0;
+    display: grid;
+    grid-template-columns: repeat(6, 275px);
+    grid-template-rows: auto;
+    justify-content: space-between;
+    grid-row-gap: 40px;
+}
+
+/* A recipeItem is a container that will contain the name, descripton, and image of each recipe */
+.recipeItem{
+    position: relative;
+    height: 350px;
+    display: none;
+}
+.displayRecipe{
+    display: block;
+}
+
+.recipeDescr{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 0.75);
+    display: none;
+}
+.recipeItem:hover .recipeDescr{
+    display: block;
+}
+
+.recipeName{
+    margin: 45px 0 10px 0;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: wheat;
+}
+
+.recipeInfo{
+    display: -webkit-box;
+    color: wheat;
+    max-height: 250px;
+    margin: 0 auto;
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 11;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+/* Each recipeItem is assigned an id which will serve to display each recipe's unique image. Additionally, we tell the recipeItem not to repeat the image, even if there is white-space, and to fit the image in such a way that there it leaves no white space */
+#recipe_1{
+    background: url(../images/recipes/raspberry.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_2{
+    background: url(../images/recipes/pastelon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_3{
+    background: url(../images/recipes/honey.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_4{
+    background: url(../images/recipes/perfectLasagnaRecipe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_5{
+    background: url(../images/recipes/mango.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_6{
+    background: url(../images/recipes/scrambledEggs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_7{
+    background: url(../images/recipes/macaron.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_8{
+    background: url(../images/recipes/spagettiCarbonara.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_9{
+    background: url(../images/recipes/blackMushroomRice.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_10{
+    background: url(../images/recipes/protienPancakes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_11{
+    background: url(../images/recipes/chikenTikka.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_12{
+    background: url(../images/recipes/chicken_burger.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_13{
+    background: url(../images/recipes/chicken-caldereta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_14{
+    background: url(../images/recipes/sizzling-crispy-sisig-recipe-.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_15{
+    background: url(../images/recipes/motehingar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#recipe_16{
+    background: url(../images/recipes/coconut.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
