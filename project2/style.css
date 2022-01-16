@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainCont{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.mainContent{
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+.mainContent > .contentItem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+.currentContent{
+    display: block !important;
+}
+
+@keyframes slideOutLeft{
+    from{
+        left: 0;
+    }to{
+        left: -100%;
+    }
+}
+@keyframes slideInLeft {
+    from{
+        left: 100%;
+    }to{
+        left: 0;
+    }
+}
+@keyframes slideOutRight {
+    from{
+        right: 0;
+    }to{
+        right: -100%;
+    }
+}
+@keyframes slideInRight {
+    from{
+        right: 100%;
+    }to{
+        right: 0;
+    }
+}
+
+.contentOverlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.bannerBtn{
+    width: 40px;
+    height: 90px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0,0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bannerBtn:hover{
+    background-color: rgba(0, 0, 0,0.5);
+}
+.bannerBtn img{
+    width: 80%;
+    height: auto;
+    filter: invert();
+}
+
+.leftBtn{
+    float: left;
+}
+.leftBtn img{
+    transform: rotate(180deg);
+}
+.rightBtn{
+    float: right;
+}
+
+.audioCtrl{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 90px;
+    top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0,0.3);
+    user-select: none;
+}
+.audioCtrl:hover{
+    background-color: rgba(0, 0, 0,0.5);
+}
+.audioCtrl img{
+    width: 80%;
+    height: auto;
+    filter: invert();
+    cursor: pointer;
+    display: none;
+}
+
+.carouselCtrl{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0,0.3);
+    user-select: none;
+}
+.carouselCtrl:hover{
+    background-color: rgba(0, 0, 0,0.5);
+}
+.carouselCtrl h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    line-height: 25px;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+.carouselCtrl img{
+    width: 80%;
+    height: auto;
+    filter: invert();
+    cursor: pointer;
+    display: none;
+}
+
+.contentCont{
+    width: 100%;
+    height: 1000px;
+}
