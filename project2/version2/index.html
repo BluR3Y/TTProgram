@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fifa Count Down</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/pageCosmetics/worldCupTrophy.jpg">
+    </head>
+    <body>
+        <div class="mainCont">
+            <div class="mainContent">
+                <div class="contentCont currentContent">
+                    <img src="images/bannerImgs/arena.jpg" class="contentItem">
+                    <div class="contentInfo">
+                        <h1>Picture Title Here...</h1>
+                    </div>
+                </div>
+                <div class="contentCont">
+                    <video class="contentItem">
+                        <source src="images/bannerImgs/FIFA2018_Preview.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                </div>
+                <div class="contentCont">
+                    <img src="images/bannerImgs/soccerBall.jpeg" class="contentItem">
+                </div>
+                <div class="contentCont">
+                    <video class="contentItem">
+                        <source src="images/bannerImgs/FIFA2018_Trailer.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                </div>
+                <div class="contentCont">
+                    <img src="images/bannerImgs/soccerField.jpeg" class="contentItem">
+                </div>
+                <div class="contentCont">
+                    <video class="contentItem">
+                        <source src="images/bannerImgs/soccerVideo.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                </div>
+            </div>
+            <div class="contentOverlay">
+                <div class="audioCtrl">
+                    <img src="images/bannerCosmetics/mute.png" id="muteBtn" style="width: 65%;" onclick="unmuteVideo()">
+                    <img src="images/bannerCosmetics/unmute.png" id="unmuteBtn" onclick="muteVideo()">
+                </div>
+                <div class="carouselCtrl">
+                    <h1 onclick="pauseCarousel()"></h1>
+                    <img src="images/bannerCosmetics/continuous.png" onclick="playCarousel()">
+                </div>
+                <div class="bannerBtn leftBtn" onclick="prevBannerImg()"><img src="images/bannerCosmetics/bannerArrow.png"></div>
+                <div class="bannerBtn rightBtn" onclick="nextBannerImg()"><img src="images/bannerCosmetics/bannerArrow.png"></div>
+            </div>
+        </div>
+        <div style="width: 100%; height:1000px;">
+
+        </div>
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>
