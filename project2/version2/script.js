@@ -260,10 +260,33 @@ function mainContentVisibility(){
     }
 }
 
-// window.addEventListener("load", function(){
-//     contentLoop = new carouselInterval();
-//     contentLoop.start();
-// });
+function hideContInfo(){
+    var contentItem = document.getElementsByClassName("currentContent")[0];
+    var closeBtn = contentItem.getElementsByClassName("closeBtn")[0];
+    var infoBtn = contentItem.getElementsByClassName("infoBtn")[0];
+    var contentInfo = contentItem.getElementsByClassName("contentInfo")[0];
+
+    contentInfo.classList.add("hideContInfo");
+
+    closeBtn.style.display = "none";
+    infoBtn.style.display = "block";
+}
+function showContInfo(){
+    var contentItem = document.getElementsByClassName("currentContent")[0];
+    var closeBtn = contentItem.getElementsByClassName("closeBtn")[0];
+    var infoBtn = contentItem.getElementsByClassName("infoBtn")[0];
+    var contentInfo = contentItem.getElementsByClassName("contentInfo")[0];
+
+    contentInfo.classList.remove("hideContInfo");
+
+    infoBtn.style.display = "none";
+    closeBtn.style.display = "block";
+}
+
+window.addEventListener("load", function(){
+    contentLoop = new carouselInterval();
+    contentLoop.start();
+});
 
 window.addEventListener("scroll", function(){
     mainContentVisibility();
