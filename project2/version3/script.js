@@ -169,7 +169,7 @@ function nextBannerImg(){
             videoItem.stop();
         }
         currentContent.classList.remove("currentContent");
-    }, 990);
+    }, 900);
 }
 
 function prevBannerImg(){
@@ -225,7 +225,7 @@ function prevBannerImg(){
             videoItem.stop();
         }
         currentContent.classList.remove("currentContent");
-    }, 990);
+    }, 900);
 }
 
 function carouselScrollOff(){
