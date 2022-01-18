@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fifa Count Down</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/pageCosmetics/worldCupTrophy.jpg">
+    </head>
+    <body>
+        <!-- Start of coded contribution supplied by Seth Khan-->
+        <header class="header">
+            <div class="logo">QATATR 2022</div>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Discover The Tournament</a></li>
+                    <li><a href="">Venues & Stadiums</a></li>
+                    <li><a href="">Qualified Teams</a></li>
+                    <li><a href="">Get Tickets</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--End of coded contribution supplied by Seth Khan-->
+
+        <div class="mainCont">          <!--This container will be set to the size of the window and will display different images and videos-->
+            <div class="mainContent">       
+                <div class="contentCont currentContent">        <!-- Each content item will have a container(contentCont) and will be hidden as default, if not containg the class attribute "currentContent"  -->
+                    <img src="images/bannerImgs/alRayyanStadium.jpg" class="contentItem">       <!-- Each images/video will have a class attribute "contentItem, making them easier to distinguish in Javascript-->
+                    <div class="contentInfo">           <!--This container will house information about the image/video, and can be hidden or shown by the click of a button-->
+                        <div class="infoCtrl">
+                            <img src="images/bannerCosmetics/close.png" class="closeBtn" onclick="hideContInfo()">
+                            <img src="images/bannerCosmetics/info.png" class="infoBtn" onclick="showContInfo()">
+                        </div>
+                        <div class="infoCont">
+                            <h1>Ahmad Bin Ali Stadium</h1>
+                            <h2>Ahmed bin Ali Stadium, popularly known as the Al-Rayyan Stadium, is a multi-purpose stadium in Al Rayyan, Qatar, It is currently used mostly for football matches and it is the home to Al-Rayyan Sports Club and Al-Kharitiyath Sports Club. The stadium, built in 2003, had a seating capacity of 21,282.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentCont">
+                    <video class="contentItem">
+                        <source src="images/bannerImgs/FIFA2018_Preview.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    <div class="contentInfo">
+                        <div class="infoCtrl">
+                            <img src="images/bannerCosmetics/close.png" class="closeBtn" onclick="hideContInfo()">
+                            <img src="images/bannerCosmetics/info.png" class="infoBtn" onclick="showContInfo()">
+                        </div>
+                        <div class="infoCont">
+                            <h1>FIFA World Cup Qatar 2022 - Emblem Reveal</h1>
+                            <h2>The Official Emblem of the 22nd edition of the FIFA #WorldCup was unveiled on the 4th of September back in 2019 as FIFA and host country Qatar reached another major milestone on the road to the world’s greatest football showpiece.</h2>
+                            <h2>The emblem’s design embodies the vision of an event that connects and engages the entire world, while also featuring striking elements of local and regional Arab culture and allusions to the beautiful game.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentCont">
+                    <img src="images/bannerImgs/alKhorStadium.jpg" class="contentItem">
+                    <div class="contentInfo">
+                        <div class="infoCtrl">
+                            <img src="images/bannerCosmetics/close.png" class="closeBtn" onclick="hideContInfo()">
+                            <img src="images/bannerCosmetics/info.png" class="infoBtn" onclick="showContInfo()">
+                        </div>
+                        <div class="infoCont">
+                            <h1>Al Bayt Stadium</h1>
+                            <h2>The Al Bayt Stadium is a retractable roof football stadium located in Al Khor city and it is the second largest stadium after Lusail. It is confirmed to host the first match scheduled for November 21st with 60,000 spectators.</h2>
+                            <h2>The municipality lies in the northeast coast of Qatar and it is considered to be one of the major cities.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentCont">
+                    <video class="contentItem">
+                        <source src="images/bannerImgs/FIFA2018_Trailer.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    <div class="contentInfo">
+                        <div class="infoCtrl">
+                            <img src="images/bannerCosmetics/close.png" class="closeBtn" onclick="hideContInfo()">
+                            <img src="images/bannerCosmetics/info.png" class="infoBtn" onclick="showContInfo()">
+                        </div>
+                        <div class="infoCont">
+                            <h1>2018 FIFA World Cup - Film Trailer</h1>
+                            <h2>A timeless story of hope, passion, heartbreak and joy from Russia 2018. FIFA Film crews take you closer than ever before.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentCont">
+                    <img src="images/bannerImgs/alWakrahStadium.jpg" class="contentItem">
+                    <div class="contentInfo">
+                        <div class="infoCtrl">
+                            <img src="images/bannerCosmetics/close.png" class="closeBtn" onclick="hideContInfo()">
+                            <img src="images/bannerCosmetics/info.png" class="infoBtn" onclick="showContInfo()">
+                        </div>
+                        <div class="infoCont">
+                            <h1>Al Janoub Stadium</h1>
+                            <h2>One of Qatar's oldest continuously inhabited areas, Al Wakrah was long a centre for pearl diving and fishing. The traditional dhow boats used in these pursuits inspired the design of Al Janoub Stadium. At its inauguration, a stunning pre-match show paid tribute to Al Wakrah's heritage and to Zaha Hadid, the architect whose firm designed the stadium's boldly futuristic shape.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentCont">
+                    <video class="contentItem">
+                        <source src="images/bannerImgs/FIFA2018TVOpening.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    <div class="contentInfo">
+                        <div class="infoCtrl">
+                            <img src="images/bannerCosmetics/close.png" class="closeBtn" onclick="hideContInfo()">
+                            <img src="images/bannerCosmetics/info.png" class="infoBtn" onclick="showContInfo()">
+                        </div>
+                        <div class="infoCont">
+                            <h1>2018 FIFA World Cup Russia - TV Opening</h1>
+                            <h2>This title sequence is inspired by the wonderful designs of the Imperial Eggs by Peter Carl Faberge, which represented the perfect combination of creativity and craftsmanship, with a secret inside. </h2>
+                            <h2>We have interpreted the beauty of the Imperial Eggs into a richly detailed and jewelled football, each panel has its own identity and elements that represent the richness of Russian culture. </h2>
+                            <h2>At the heart of each of these panel sits a jewel, which houses archive of each nation who has won the FIFA World Cup™ - Brazil, Uruguay, England, Italy, Argentina, France, Spain and Germany.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentCont">
+                    <img src="images/bannerImgs/DohaStadium.jpg" class="contentItem">
+                    <div class="contentInfo">
+                        <div class="infoCtrl">
+                            <img src="images/bannerCosmetics/close.png" class="closeBtn" onclick="hideContInfo()">
+                            <img src="images/bannerCosmetics/info.png" class="infoBtn" onclick="showContInfo()">
+                        </div>
+                        <div class="infoCont">
+                            <h1>Khalifa International Stadium</h1>
+                            <h2>Khalifa International Stadium, also known as National Stadium, is a multi-purpose stadium in Doha, Qatar, as part of the Doha Sports City complex, which also includes Aspire Academy, Hamad Aquatic Centre, and the Aspire Tower. It is named after Khalifa bin Hamad Al Thani, Qatar's former Emir.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentCont">
+                    <img src="images/bannerImgs/DohaEducationStadium.jpg" class="contentItem">
+                    <div class="contentInfo">
+                        <div class="infoCtrl">
+                            <img src="images/bannerCosmetics/close.png" class="closeBtn" onclick="hideContInfo()">
+                            <img src="images/bannerCosmetics/info.png" class="infoBtn" onclick="showContInfo()">
+                        </div>
+                        <div class="infoCont">
+                            <h1>Education City Stadium</h1>
+                            <h2>Education City Stadium is a football stadium which is located in Al Rayyan, Qatar, and was built as a venue in time for the upcoming 2022 FIFA World Cup held in Qatar. The stadium is located within several university campuses at the Qatar Foundation's Education City.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentCont">
+                    <img src="images/bannerImgs/lusailStadium.jpg" class="contentItem">
+                    <div class="contentInfo">
+                        <div class="infoCtrl">
+                            <img src="images/bannerCosmetics/close.png" class="closeBtn" onclick="hideContInfo()">
+                            <img src="images/bannerCosmetics/info.png" class="infoBtn" onclick="showContInfo()">
+                        </div>
+                        <div class="infoCont">
+                            <h1>Lusail Stadium</h1>
+                            <h2>The Lusail Iconic Stadium is located in Lusail city and it is the biggest stadium amongst all arenas in Qatar.  It was built in April 2021 and will seat 80,000 spectators. The stadium will host the opening and final games of the 2022 FIFA World Cup.</h2>
+                            <h2>Lusail city is being developed as part of Qatar 2030 vision, but it is expected to accommodate 450,000 people. As well as planned to have residential areas, islands resorts, commercial districts and etc.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentOverlay">        <!-- This container will house alot of the functionality buttons for the images/videos -->
+                <div class="carouselCtrl">      <!--  This container will house the buttons that will control the carousel animations  -->
+                    <h1 onclick="pauseCarousel()"></h1>
+                    <img src="images/bannerCosmetics/continuous.png" onclick="playCarousel()">
+                </div>
+                <div class="videoCtrl">     <!--  This container will house the buttons and slider for controlling the videos  -->
+                    <div class="visibilityCtrl">
+                        <img src="images/bannerCosmetics/video.png" id="visibilityOpen" onclick="expandVideoCtrl()">
+                        <img src="images/bannerCosmetics/close.png" id="visibilityClose" onclick="closeVideoCtrl()">
+                    </div>
+                    <div class="videoCtrlOptions"> 
+                        <div class="videoSliderCont">   <!--  This div will house the slider that will display and control the progress of the video  -->
+                            <input type="range" min="0" max="500" value="0" class="videoSlider" oninput="changeVideoTime()">
+                        </div>
+                        <h1 id="videoTime"></h1>    <!--  Will display the time into the video  -->
+                        <div class="audioCtrl">     <!--  Will house the buttons that will control the volume of the video  -->
+                            <img src="images/bannerCosmetics/mute.png" id="muteBtn" onclick="videoItem.unmute()">
+                            <img src="images/bannerCosmetics/unmute.png" id="unmuteBtn" onclick="videoItem.mute()">
+                        </div>
+                        <div class="videoPlayCtrl"> <!--  Will house the buttons that will control the state of the video, play/pause  -->
+                            <img src="images/bannerCosmetics/pause.png" id="pauseBtn" onclick="videoItem.pause()">
+                            <img src="images/bannerCosmetics/play.png" id="playBtn" onclick="videoItem.resume()">
+                        </div>
+                    </div>
+                </div>
+                <!------ Start of coded contribution supplied by Justin ------>
+                <div onclick="timeExpand()" id="timeExpand" class="timerCont">
+                    <span id="days"></span>
+                    <span><img class="futbol" src="/images/bannerCosmetics/futbol-solid.svg" alt="futbol"></span>
+                    <span id="hours"></span>
+                    <span><img class="futbol" src="/images/bannerCosmetics/futbol-solid.svg" alt="futbol"></span>
+                    <span id="minutes"></span>
+                    <span><img class="futbol" src="/images/bannerCosmetics/futbol-solid.svg" alt="futbol"></span>
+                    <span id="seconds"></span>
+                </div> 
+                        <!-- span tag for inline element -->
+                <div style="display: none;" onclick="timeShrink()" id="timeShrink" class="timerContExpanded">
+                    <span id="days2"></span>
+                    <span id="hours2"></span>  
+                    <span id="minutes2"></span>
+                    <span id="seconds2"></span>
+                </div>
+                <!------ End of coded contribution supplied by Justin ------>
+                <div class="bannerBtn leftBtn" onclick="prevBannerImg()"><img src="images/bannerCosmetics/bannerArrow.png"></div>
+                <div class="bannerBtn rightBtn" onclick="nextBannerImg()"><img src="images/bannerCosmetics/bannerArrow.png"></div>
+            </div>
+        </div>
+        <div style="width: 100%; height:1000px;">
+
+        </div>
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>
+        <!-- Disclaimer: All code that is not within the contibution tags was written by Rey H. Flores-->
+
+<!------------------------ End of coded contribution supplied by Team (Rey, Seth, Justin) ---------------------->
