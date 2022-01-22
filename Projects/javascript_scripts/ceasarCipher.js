@@ -19,4 +19,6 @@ function ceasarCipher(numRotates, message){     //A function which will encrypt 
     console.log(finalMessage)
 }
 
+//This task could also be easily done with modulo, but I chose not to use it, as a means of conceptualizing indexes
+
 ceasarCipher(3, "wxyz");        //Call the function and pass the number of rotations and message as arguments
