@@ -1,0 +1,13 @@
+Installing anaconda(Miniconda): https://docs.conda.io/en/latest/miniconda.html
+    -leave default selections during installation
+    -open anacoda terminal
+    -to allow windows powershell to use conda: 
+        *conda init powershell
+        *In administrative powershell: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+    ** when creating a new anaconda environment, set python version to 3.8: python=3.8
+
+Installing Flask Framework:
+    -In powershell: pip install -U Flask
+    -For Flask SQLAlchemy: pip install -U Flask-SQLAlchemy
+    -For pytest: pip install pytest
