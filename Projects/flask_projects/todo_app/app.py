@@ -1,5 +1,8 @@
+from distutils.log import debug
 from flask import Flask, request, redirect, url_for, render_template
 from flask_sqlalchemy import SQLAlchemy
+
+import os
 
 app = Flask(__name__)
 
@@ -61,14 +64,9 @@ def delete(todo_id):
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(debug=True)
-
-
-# @app.route("/")
-# def home1():
-#     return 'hi there'
-
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
 
 # if __name__ == "__main__":
-#     app.run('', 8000, debug=True)
-    
+#     db.create_all()
+#     app.run(debug=True)
